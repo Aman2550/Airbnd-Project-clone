@@ -1,6 +1,9 @@
 if (process.env.NODE_ENV !== "production") {
   require('dotenv').config();
+ 
 }
+// console.
+
 // console.log(process.env.SECRET)
 const express = require("express");
 const app = express();
@@ -65,7 +68,7 @@ store.on("error", (err) => {
 
 const sessionOptions ={
   store,
-  secret: process.env.SECRETECRET,
+  secret: process.env.SECRET,
   resave:false,
   saveUninitialized : true,
   cookie:{

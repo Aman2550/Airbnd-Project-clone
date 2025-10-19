@@ -1,4 +1,5 @@
 
+
 <style>
 
 .btn-search{
@@ -25,6 +26,24 @@ margin-right: 0.5rem;
   padding: 0.5rem 3rem 0.5rem 3rem;
   font-size: 1rem;
 }
+
+.navbar-collapse {
+    background-color: #ffffff; /* ya jo color chahiye */
+    padding: 1rem; /* optional, spacing ke liye */
+    border-radius: 0.5rem; /* optional, thoda rounded look */
+}
+@media (max-width: 767px) {
+    .navbar-collapse {
+        background-color: #ffffff; /* ya koi light color */
+    }
+}
+
+@media (min-width:600px) and(max-width:767px){
+  .d-flex{
+    display: none;
+  }
+}
+
 </style>
 
 
@@ -35,15 +54,13 @@ margin-right: 0.5rem;
     <!-- Brand -->
     <a class="navbar-brand m" href="/listings">
    
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+   
     </a>
 
     <a class="navbar-brand" href="/listings"><i class="fa-solid fa-location-arrow arrow"></i>airbind</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
-  <span class="navbar-toggler-icon"></span>
-</button>
+
+  
+
 
 
 
@@ -71,7 +88,7 @@ margin-right: 0.5rem;
 
 
       <div class="navbar-nav offset-3">
-        <form  class="d-flex" role="search" >
+        <form  class="d-none d-md-flex"  role="search" >
           <input class="form-control me-2 search-inp" type="search" placeholder="Search destination"/>
           <button class=" btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
         </form>

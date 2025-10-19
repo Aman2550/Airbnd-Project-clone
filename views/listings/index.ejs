@@ -14,11 +14,14 @@
       margin-right: 2rem;
       margin-top: 2rem;
       opacity: 0.7;
+      overflow-x: auto;        
+      white-space: nowrap;
     }
     
     .filter:hover{
       opacity: 1;
       cursor: pointer;
+      flex: 0 0 auto; 
     }
     .filter p{
       font-size: 0.8rem;
@@ -36,6 +39,20 @@
       display: flex;
       align-items: center;
     }
+
+
+    @media (max-width:600px) {
+      .filter{
+        display: none;
+    
+      }
+     .tax-toggle{
+     display: none;
+ 
+     }
+    }
+  
+
     </style>
 <div id="filters">
 
